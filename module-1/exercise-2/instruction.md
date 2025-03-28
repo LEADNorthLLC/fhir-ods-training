@@ -1,35 +1,17 @@
-# Module 5: Exercise 2
+///Hello Team! Note from Elise (I'll take this out later), all the exercises I am working on can also be found through this google doc link: https://docs.google.com/document/d/14WjDPaDpcYLcZxt6JDxF9cYxhvi-9wVloN-mamQ_XtE/edit?usp=sharing
 
+# Module 1: Exercise 2
 
-# Loading and Navigating SDA
+# Running a Demo X12 837I into SDA in EDGE Gateway + Walking through the Message Trace
 
-***To start this exercise you must first complete Module 5 Exercise 1.***
+**Objective:** The goal of this exercise is to [GOAL TO BE DETERMINED]
 
-**Objective:** The goal of this exercise is to learn about InterSystems SDA.
+First, on the HSEDGE namespace of your HealthShare instance, navigate to the EdgeGatewayProduction  by clicking on Interoperability -> Configure -> Production -> Go. 
 
-First, navigate to the XML Schemas screen of your IRIS instance by clicking on Interoperability -> Interoperate -> XML -> XML Schema Structures. You can also get there by clicking the following link:
+Now, click on the EnsLib.EDI.X12.Service.FileService; this is where we will send our example X12 file. In the settings tab, under basic settings, find the File Path that is connected to this service [OR WE CAN PROVIDE THEM WITH THE NAME OF THE FILE PATH, EITHER OR]
 
-	http://localhost:32783/csp/healthshare/fhirdemo/EnsPortal.EDI.XML.SchemaMain.zen?$NAMESPACE=FHIRDEMO&$NAMESPACE=FHIRDEMO&
+Navigate to [FILE LOCATION TO BE DETERMINED] and copy the file 837Ix12example01.txt [NAME SUBJECT TO CHANGE]. Paste the copied file into the in-folder connected to the EnsLib.EDI.X12.Service.FileService (the folder we located in the previous step)
 
-Now, click on the Import button and select the HS.SDA3.xsd file located under the \irisdata\ folder. If you don't see the file, ensure that your "File of Type" dropdown is set to see XSD files. Complete the import.
+Return to the EdgeGatewayProduction, click on the EnsLib.EDI.X12.Service.FileService, and navigate to the messages tab. Click on the header number next to the top message to pull up the message trace. Refer to images/x12messageTrace.png as an example of what it should look like.
 
-Now you should see all of the sections/structures contained within the SDA XML format. Any documentation you may run across that relates to "Viewer cache or VIEWERLIB" can generally be ignored as this relates to Clinical Viewer in a HealthShare UCR environment only.
-
-**Tasks:**
-1. Search for and open the link for Container. How is this similar and different from a FHIR bundle?
-
-
-2. Click on the Procedures() on Row 15.  Review the details for ProcedureTime and indicate below what HL7 field this data comes from.
-
-
-3. Scroll to the EncounterNumber field on Row 4.  What happens when PV1-19.1 is null?
-
-   
-4. What is the EncounterNumber when PV1-19.1 is populated and FromTime is also populated?
-
-   
-5. Head back to the main page for Container and indicate which section of SDA will contain the data coming in from DG1?
-
-   
-6. Go another level up to the main SDA schema page and dig into three more SDA structures. Scan the documentation to get a feel for some of the constraints, data types and other details that involve mapping data into SDA3.
-
+In this trace, the X12 file is being sent to the Inbound Process DTL where it is transformed into SDA3. The information is eventually sent over to update the ODS FHIR server (step 5) and in the AddUpdateHubResponse (step 6) you can see the unique patient MPIID that we will use to retrieve the FHIR bundle.

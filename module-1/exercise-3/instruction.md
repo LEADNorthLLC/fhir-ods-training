@@ -1,23 +1,29 @@
-# Module 5: Exercise 3
+///Hello Team! Note from Elise (I'll take this out later), all the exercises I am working on can also be found through this google doc link: https://docs.google.com/document/d/14WjDPaDpcYLcZxt6JDxF9cYxhvi-9wVloN-mamQ_XtE/edit?usp=sharing
 
+# Module 1: Exercise 3
 
-# Navigating the FHIR documentation
+# Viewing the FHIR bundle through Postman
 
-***To start this exercise you must first complete Module 5 Exercise 1.***
+***To start this exercise you must first complete Module 1 Exercise 1 and 2.***
 
-**Objective:** The goal of this exercise is to learn how to access InterSystems FHIR Annotations.
+**Objective:** The goal of this exercise is to learn how to query for a patient through the API
 
-First, navigate to the Home screen of your IRIS instance. You can do this by clicking the Home button on the top bar or just click on the following link:
+First, open up Postman. If you already have an acoount, go ahead and sign in, if not, start by signing up. 
 
-	http://localhost:32783/csp/sys/%25CSP.Portal.Home.zen?$NAMESPACE=%25SYS
+Now, click the New Request button. This will open up a workspace where we can test the FHIR APIs.
 
-Now, navigate to the **Health** tab from the Home screen.
+Verify that the request is set to GET.
 
-To the right of the word **Foundation,** click on the FHIRDEMO namespace.
+In the URL text box, enter this URL: http://localhost:52773/csp/healthshare/hsods/fhir/r4a/Patient/000/$everything Replace 000 with the MPIID returned in the visual trace from exercise 2. 
+**[QUESTIONS: WILL THE MPIID RETURNED FROM EXERCISE 1 (HL7) AND EXERCISE 2 (X12) BE THE SAME? THEY SHOULD BE AS LONG AS NATHAN AND I MAKE SURE THAT THE EXAMPLE FILES ARE THE SAME PATIENT. ALSO THE URL WILL PROBABLY BE SOMETHING ELSE, BUT FOR NOW THIS IS WHAT I HAVE LOCALLY]**
 
-On the left navigation bar, click **Schema Documentation** and then **FHIR Annotations.**
+Navigate to the Authorization tab and change the Auth type to Basic Auth. Enter in the username and password connected to the HealthShare instance. **[IS AUTH SOMETHING WE SHOULD STILL TURN OFF? I AM LEAVING IT IN FOR NOW]**
 
-On this screen, you can access all of the InterSystems FHIR documentation. Note the three different drop-downs you have access to. As you use these you will notice that only one drop down can be active at one time. However, the first two dropdowns work together and are specific to FHIR to SDA3 mapping information while the third dropdown is for SDA3 to FHIR mapping information. You'll also notice that the each dropdown may include FHIR resource types, data types AND other structural element types. Keep that in mind as you use this page.
+Send the request.
+
+Once the request goes through, you should now be able to view the FHIR bundle. Scrolling through the bundle, you should see all resources associated with this Patient [Claim, ClaimResponse, RelatedPerson, Patient, Organization, Provenance, maybe more associated with the HL7 sent for the same patient]
+
+**I HAVE NOT CHANGED TASKS YET, BUT I WANT THIS TO BE TASKS LIKE FINDING VALUES THAT WERE RETURNED IN THE FHIR BUNDLE, BOTH FROM THE HL7 AND X12 THAT UPDATED THE PATIENT. QUESTIONS LIKE: REFEREING BACK TO EXERCISES 1 AND 2, WHICH FILE LOADED THE CLAIM FOR THIS PATIENT? THOUGHTS?**
 
 **Tasks:**
 1. Find Medication using the **FHIR4** dropdown.
