@@ -1,80 +1,29 @@
-# Module 6: Exercise 2
-
-# Creating a Custom DTL
+# Module 5 Exercise 2 - Adding a Custom DTL for Post-FHIR Transform
 
 **Learning Objective:** 
 * Identify the location of standard DTLs
 * Create custom DTLs for mapping FHIR resources
-* Create sub-transform DTL for updating extensions in the Patient Resource
+* Create sub-transform DTL for mapping UDS age extension
 * Validate FHIR bundle against UDS definitions
 
 **Reference:** [SDA to FHIR Transformation Product Documentation](https://docs.intersystems.com/irisforhealthlatest/csp/docbook/DocBook.UI.Page.cls?KEY=HXFHIR_transforms)
 
-**Task:** There are variations in how IGs profiles are implemented, especially with respect to extenson. The standard out-of-the-box HealthShare FHIR transformations implement many extension values whereas your desired FHIR profile may have a different implementation.  
-
-In this exercise, you will be overriding the Explanation of Benefit resource to alter the FHIR output. 
-
-The output format currently looks like this: 
+**Task:** The UDS Profile for the Patient Resource contains extensions that are unique to UDS. In this exercise, you will be customizing the Patient Resource transformation in order to include the UDS Plus Age Extension. The output format should look like the following sample:
 
 ```bash
-      
-        "adjudication": [
-          {
-            "amount": {
-              "extension": 
-              [
-                {
-                  "url": "http://intersystems.com/fhir/extn/sda3/lib/adjudication-detail-currency",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "code": "USD",
-                        "display": "USD"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "value": -68.11
-          },
-          "category": 
-          {
-            "coding": [
-              {
-                "code": "drugcost",
-                "display": "Drug cost"
-              }
-            ]
-          }
-        ]
-      
- ```     
-The output format should look like the following sample:
-
-```bash
-    "adjudication": [
-        {
-          "category": 
-          {
-            "coding": [
-              {
-                "system": "http://intersystems.com/fhir/extn/sda3/lib/adjudication-detail-currency",
-                "code": "drugcost",
-                "display": "Drug cost"
-              }
-            ]
-          },
-          "amount": 
-          {
-            "value": -68.11,
-            "currency": "USD"
-          }
-        },
-      ]
+{
+	  "url" : "http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-age-extension",
+	  "valueQuantity" : {
+		"value" : 70,
+		"unit" : "yr",
+		"system" : "http://unitsofmeasure.org",
+		"code" : "a"
+}
+	
 ```
 
 **Requirements:**
-
+Calculate the age *value* by taking the current year and subtracting the year sent in the **source.birthTime** field in the SDA. You will hardcode the other values in the extension.  
 
 ## Setting up a Custom Transformation Package
 First set the location of the custom DTL library
@@ -91,32 +40,29 @@ First set the location of the custom DTL library
 5. To check if a custom DTL package already exists, enter:
 
 ```
- 	write ##class(HS.FHIR.DTL.Util.API.ExecDefinition).GetCustomDTLPackage()
+	write ##class(HS.FHIR.DTL.Util.API.ExecDefinition).GetCustomDTLPackage()
 ```
 
 6. If the custom DTL package does not already exist, the above code will return null.  To set the package, enter the following command which designates **HS.Local.FHIR.DTL** as the name of your custom DTL package:
 ```
- 	set status = ##class(HS.FHIR.DTL.Util.API.ExecDefinition).SetCustomDTLPackage("HS.Local.FHIR.DTL")
+	set status = ##class(HS.FHIR.DTL.Util.API.ExecDefinition).SetCustomDTLPackage("HS.Local.FHIR.DTL")
 ```
 
 7. To check that the package was defined successfully, enter:
 
 ```
- 	write status
+	write status
 ```
 
 The response should be: 1 which means the processing was successful. You have set your custom DTL package. The FHIR processes will automatically give precedence to any versions of the DTL transforms located under **HS.Local** in the **FHIRDEMO** namespace. 
 
 ## Modifying the DTL Transformation Code
 
-1. Use the FHIR Annotations to figure out what SDA element corresponds to the **ExplanationOfBenefit.adjudication** element. This is where you will be modifying the transformation. 
+1. Open up the Patient Resource DTL: **HS.FHIR.DTL.SDA3.vR4.Patient.Patient**.  This is accessible by going to the System Management Portal -> Interoperability -> Build -> Data Transformations and clicking Open
 
-1. Open up the Explanation of Benefit Resource DTL: **HS.FHIR.DTL.SDA3.vR4.MedicalExplanationOfBenefit.ExplanationOfBenefit**.  This is accessible by going to the System Management Portal -> Interoperability -> Build -> Data Transformations and clicking Open
+2. Click on **Save As** to copy the **HS.FHIR.DTL.SDA3.vR4.Patient.Patient** class to a new class called: **HS.Local.FHIR.DTL.SDA3.vR4.Patient.Patient**. The naming is important here as the FHIR base code will give this custom class precedence over the out-of-the-box transform. 
 
-2. Click on **Save As** to copy the **HS.FHIR.DTL.SDA3.vR4.MedicalExplanationOfBenefit.ExplanationOfBenefit** class to a new class called: **HS.Local.FHIR.DTL.SDA3.vR4.MedicalExplanationOfBenefit.ExplanationOfBenefit**. The naming is important here as the FHIR base code will give this custom class precedence over the out-of-the-box transform. 
-
-***CNR: Need to screen shot ***
-![Save Local Medical Explanation of Benefit Resource DTL](../images/module6-2-save-resource-as.png)
+![Save Local Patient Resource DTL](../images/module6-2-save-resource-as.png)
 
 3. Create a sub-transform to do the work of mapping the extension. 
 

@@ -1,4 +1,4 @@
-# Module 5 Exercise 1 - Pre-FHIR Transform - Regular HL7 mapping 
+# Module 6 Exercise 1 - Pre-FHIR Transform - Regular HL7 mapping
 
 **Learning Objectives:** 
 * 
