@@ -8,6 +8,8 @@ The goal of this exercise is to [GOAL TO BE DETERMINED]
 
 ## Instructions:
 
+### Task 1: 
+
 First, on the HSEDGE namespace of your HealthShare instance, navigate to the EdgeGatewayProduction  by clicking on Interoperability -> Configure -> Production -> Go. 
 
 Now, click on the EnsLib.EDI.X12.Service.FileService; this is where we will send our example X12 file. In the settings tab, under basic settings, find the File Path that is connected to this service [OR WE CAN PROVIDE THEM WITH THE NAME OF THE FILE PATH, EITHER OR]
