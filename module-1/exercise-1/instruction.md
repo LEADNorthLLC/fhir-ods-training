@@ -9,6 +9,8 @@
 
 ### Task 1: 
 
+//Temp adding same text as ex 2
+
 First, on the HSEDGE namespace of your HealthShare instance, navigate to the EdgeGatewayProduction  by clicking on Interoperability -> Configure -> Production -> Go. 
 
 Now, click on the EnsLib.EDI.HL7.Service.FileService; this is where we will send our example HL7 file. In the settings tab, under basic settings, find the File Path that is connected to this service [OR WE CAN PROVIDE THEM WITH THE NAME OF THE FILE PATH, EITHER OR]
