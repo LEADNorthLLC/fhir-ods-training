@@ -1,6 +1,7 @@
 # Module 1 Exercise 1 - Running a Demo HL7 into SDA in Edge Gateway
 
 **Learning Objectives:** 
+Load an HL7 mesage into FHIRs
 * 
 
 **Task:** 

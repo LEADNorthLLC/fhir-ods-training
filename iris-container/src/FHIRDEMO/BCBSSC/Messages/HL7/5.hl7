@@ -1,0 +1,22 @@
+MSH|^~\&|Healthix_CEN|MSH4-NYPMILSTEIN - NYP Milstein Hospital|HEALTHSHARE|MSH6-EMBH|20220808190649||ADT^A04|LF220808230649767983||2.5
+EVN|A04|20220808190649|||ROR9195^ROBINSON^ROZIE^^^^^^COLUMBIA
+PID|1||1009456^^^PID-34-NYPMILSTEIN^MRN|PID-4.1^PID-4.2^MR^PID-4.4^EPH-CVSSSK|ZATARA^ZATANNA||19881123|F||WHITE|77 BLACKROSE ST^^STATEN ISLAND^NY^10314-3809^USA^^^RICHMOND|RICHMOND|||ENG|M||199464524||||NHISP||||||USA||0
+NK1|1|||1745 Smithy Rd^^Brookieville^WA^98606^USA^B|(917)572-7836^^FX^support@amazon.com^^917^5727836|(917)572-7838^^PH^^^917^5727838|E|20200101|20221231|ADMIN ASST||2151-1|NK113-AMAZON^L^^^^^LI^^^12589252000|||||||ENG|||||||||CE^Contact employer if patient is unable to work^NIC|BOSS^PERSON^^SR^MR^^U^^^^^20220101^20221230||2523 Whasts Rd^^Bluegill^WA^98606^USA^H^^^^^^20170506^20250506
+NK1|2|LILLY^PETER|Spouse||(917)572-7836^^CP^^^917^5727836|||||||||||||||ENGPV1|1|E|PBYADLTER^ROOMM01^BED01^NYPMILSTEIN^NYP Milstein Hospital|E|||PV1-7.1^HOUSE^JOHN^MD^SR^DR^MD^OTHERTBL^MGS^L|PV1-8.1^DOOLITTLE^HARRY^MD^III^DR^MD^SOMETBL^MGS^L||PV110-Emergency||||ED Admit|||PV1-17.1^HOUSER^DOOGIE^MD^JR^DR^MD^SRCTBLE^MGS^L||199464524|||||||||||||||||||||||||20220808125600|||||||A
+PV2|||0C234^THROAT PAIN|||||||||Patient came in with sore throat and is being treated for strep|
+AL1|1|medication|578008^Hemoglobin Jianghua^|severe^severe|1208004^Gastroptosis|20140623|
+AL1|2|medication|3066001^Triiodothyroacetic acid^|mild^mild|1926006^Osteopetrosis|20150123|
+OBX|1|ST|||Healthix Alert : SHELDON COOPER (EMBH MRN: 4008) was admitted to One Brooklyn Health - Kingsbrook (MRN: 1180), Event Type: ED Discharge. -- Admission on Aug 8 2022 03:14PM -- Patient was Discharged on Aug 8 2022 07:10PM ---- Please log into the Healthix HIE to view more information about this event.
+OBX|2|ST|||Emblem Health Program ADVAlert^
+OBX|3|CE|N39.0^Urinary tract infection, site not specified^ICD-10-CM||diagnosis^N39.0^Urinary tract infection, site not specified^ICD-10-CM^^F
+OBX|4|CE|R52^Pain, unspecified^ICD-10-CM||diagnosis^R52^Pain, unspecified^ICD-10-CM^^F
+OBX|5|CE|M54.6^Pain in thoracic spine^ICD-10-CM||diagnosis^M54.6^Pain in thoracic spine^ICD-10-CM^^F
+OBX|6|CE|01||dischargeDisposition^01^^
+DG1||OBHSKJMC-DXG-LOCAL||side pain|||^A
+DG1||OBHSKJMC-DXG-LOCAL|0|Other|||^A
+DG1||ICD-10-CM|M54.6|Pain in thoracic spine|||^F
+DG1||ICD-10-CM|R52|Pain, unspecified|||^F
+DG1||ICD-10-CM|N39.0|Urinary tract infection, site not specified|||^F
+NK1|1|MARTIN^EL|03|^^^^^USA|(800)432-9872^P^PH^^^999^4329872||2^^1710~2^^1718|||||||||||||OTHROBX|1|ST|||Healthix Alert : BECA LILLY (EMBH MRN: 03432) was admitted to NYP Milstein Hospital (MRN: 1009), Event Type: ED Admit. -- Admission on Aug 8 2022 12:56PM ---- Please log into the Healthix HIE to view more information about this event.
+OBX|2|ST|||Emblem Health Program ADVAlert^
+IN1||10361007^EMBLEM HEALTH GHI/EMPIRE CBP|10361|IN14-EMBLEM - GHI (GROUP HEALTH INCORPORATED)|^^NEW YORK^^||||||||||HMO

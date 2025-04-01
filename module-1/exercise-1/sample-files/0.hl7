@@ -1,0 +1,21 @@
+MSH|^~\&|Healthix_CEN|MSH4-NYPMILSTEIN - NYP Milstein Hospital|HEALTHSHARE|MSH6-EMBH|20220808190649||ADT^A04|LF220808230649767983||2.5
+EVN|A04|20220808190649||EventReason^^NPI|ROR9195^ROBINSON^ROZIE^^^^^^COLUMBIA
+PID|1||1009456^^^PID-34-NYPMILSTEIN^MRN|6546546465^^^^|BANNER^BRUCE^^^^^D||19881123|M||WHITE|123 LONDON ST^^STATEN ISLAND^NY^10314-3809^USA^H^^RICHMOND|RICHMOND|3281774389^PRN^CP||ENG|M||199464524||WDL13289008^WA||NHISP|Illinois|||USA|Yes|USA|||
+NK1|1|DIAZ^JOSE||1745 Smithy Rd^^Brookieville^WA^98606^USA^B|(917)572-7836^^FX^support@amazon.com^^917^5727836|(917)572-7838^^PH^^^917^5727838|E|20200101|20221231|ADMIN ASST||2151-1|NK113-AMAZON^L^^^^^LI^^^12589252000|W|M|2000|||USA|ENG|||||BUDH|Major|USA|HISP|HR^Human Resource|BOSS^PERSON^^SR^MR^^U^^^^^20220101^20221230||2523 Whasts Rd^^Bluegill^WA^98606^USA^H^^^^^^20170506^20250506
+PV1|1|E|PBYADLTER^ROOMM01^BED01^NYPMILSTEIN^NYP Milstein Hospital^reserved|E|||ONE^TWO^THREE^FOUR^FIVE^SIX^SEVEN^EIGHT^NPI|||PV110-Emergency||||ED Admit|||989898^Admitting^Doctor^DR^^^^^NPI||199464524|||||||||||||||||home discharge||||||||20220808125600|2024||||||A
+PV2|||0C234^THROAT PAIN^L|||||||||Patient came in with sore throat and is being treated for strep|
+OBX|1|ST|||Healthix Alert : SHELDON COOPER (EMBH MRN: 4008) was admitted to One Brooklyn Health - Kingsbrook (MRN: 1180), Event Type: ED Discharge. -- Admission on Aug 8 2022 03:14PM -- Patient was Discharged on Aug 8 2022 07:10PM ---- Please log into the Healthix HIE to view more information about this event.
+OBX|2|ST|||Emblem Health Program ADVAlert^
+OBX|3|CE|N39.0^Urinary tract infection, site not specified^ICD-10-CM||diagnosis^N39.0^Urinary tract infection, site not specified^ICD-10-CM^^F
+OBX|4|CE|R52^Pain, unspecified^ICD-10-CM||diagnosis^R52^Pain, unspecified^ICD-10-CM^^F
+OBX|5|CE|M54.6^Pain in thoracic spine^ICD-10-CM||diagnosis^M54.6^Pain in thoracic spine^ICD-10-CM^^F
+OBX|6|CE|01||dischargeDisposition^01^^
+AL1|1|medication|578008^Hemoglobin Jianghua^|severe^severe|1208004^Gastroptosis|20140623|
+AL1|2|medication|3066001^Triiodothyroacetic acid^|mild^mild|1926006^Osteopetrosis|20150123|
+DG1||OBHSKJMC-DXG-LOCAL||side pain|||^A|||||||||878338888^BURROW^JACK^^^^^^NPI
+DG1||OBHSKJMC-DXG-LOCAL|0|Other|||^A
+DG1||ICD-10-CM|M54.6|Pain in thoracic spine|||^F
+DG1||ICD-10-CM|R52||||^F
+DG1||ICD-10-CM|N39.0|Urinary tract infection, site not specified|||^F
+GT1|1|1008996908^^^GT1-2.4^EN|KANE^JANE|KANE^JOHN|2330 VOORHIES AVE^APT 5L^BROOKLYN^NY^11235^USA^^^KINGS|(347)232-4205^^HP^^^347^2324205~(999)999-9999^^CP^^^999^9999999|3219119475|19520831|F|O|relation^^L|106-44-7212
+IN1||2.1done^2.2done^2.3done|3.1done|Emblem Health|123 NE 72 AVE^^Seattle^WA^98304^USA^BDL^^King^^^^20150504^20230314|Doe^John^^SR^Duke^^C^^^^^20020701^20200701|1238932333|8ext|9ext|groupid|Employer OrgName^^^^^^^^^3450909|20020701|20220701|auth|WCBPOL|16done|self^17.2done^17.3ext|070102|21398 Grove St|||22|||||||2022||AG2|DONE|||b22|365631done|70000^gpvisit
