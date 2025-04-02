@@ -1,4 +1,4 @@
-# Module 4 Exercise 3 - How to Add FHIR Resource Extensions
+# Module 4 Exercise 2 - How to Add FHIR Resource Extensions
 
 **Learning Objectives:** 
 * 

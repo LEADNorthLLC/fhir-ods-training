@@ -1,5 +1,3 @@
-# Module 6: Exercise 1
-
 # Creating an HL7 to FHIR Integration
 
 **Learning Objectives:** 
