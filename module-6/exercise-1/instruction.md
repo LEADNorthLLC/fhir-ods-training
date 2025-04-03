@@ -1,4 +1,4 @@
-# Module 5 Exercise 1 - Adding a Custom DTL for Post-FHIR Transform
+# Module 6 Exercise 1 - Adding a Custom DTL for Post-FHIR Transform
 
 
 ## Modifying the DTL Transformation Code
