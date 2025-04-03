@@ -7,10 +7,12 @@
 
 The first step is connecting to the AWS EC2 instance. Navigate to the following link: http://ec2-18-219-162-44.us-east-2.compute.amazonaws.com/irishealth/csp/sys/UtilHome.csp
 
-Once there you can log in with the following username: _system, and the password: SYS.
+
+You will be assigned a username and password to use in the format of: train# with the same password, train#
+i.e. train1/train1
 
 
-On your assigned EGFHIRTRAINGING namespace of your HealthShare instance, navigate to the EdgeGatewayProduction by clicking on Interoperability -> Configure -> Production. 
+On your assigned EGFHIRTRAINING namespace of your HealthShare instance, navigate to the EdgeGatewayProduction by clicking on Interoperability -> Configure -> Production. 
 
 Create a new Service by clicking on the plus `+` next to the **Services** header. This will open a wizard where you will set the Service class to **EnsLib.HL7.Service.FileService** and the Service name to **EnsLib.HL7.Service.FileService**. Click enable and ok to finish the service. 
 
