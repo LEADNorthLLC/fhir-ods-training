@@ -1,4 +1,4 @@
-# Module 6 Exercise 1 - FHIR Terminology
+# Module 5 Exercise 1 - FHIR Terminology
 
 **Task:** 
 
