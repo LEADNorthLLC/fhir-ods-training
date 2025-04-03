@@ -30,7 +30,7 @@ Once we have all of your components created you need to connect them all togethe
     HS.FHIR.DTL.Util.HC.SDA3.FHIR.Process - HS.FHIRServer.Interop.Operation
 
 
-Set the inbound file to the following, except replacing 00 with the number of your instance:
+Set the File Path to the following, except replacing 00 with the number of your instance:
 /tmp/fhir-training00/hl7
 
 
