@@ -7,7 +7,7 @@
 
 Task 1
 
-Once putty is set up navigate to FHIR Terminology page. The path to do this is by clicking on Health -> Schema Documentation -> FHIR Annotations. 
+Navigate to FHIR Terminology page. The path to do this is by clicking on Health -> Schema Documentation -> FHIR Annotations. 
 
 Once on this page click on the **View Lookups** button. This will open a window that shows you the existing FHIR Terminology transforms that are currently being applied. 
 
@@ -23,7 +23,7 @@ Inside of Putty navigate to the following location:
     Connections -> SSH -> Auth -> Credentials
 
 Set the Private Key for Authentication the healthshare-connect.ppk you downloaded.
-(../images/mod6-ex1.3.png)
+![Putty Setup](../images/mod6-ex1.3.png)
 
 
 Navigate back to Connections.
@@ -32,18 +32,24 @@ Set the following:
     Port: 22
     Connection Type: SSH
 
-(../images/mod6-ex1.1.png)
+![Putty Setup](../images/mod6-ex1.1.png)
+
+
+Now that we have Putty access we can run the script to update a entry in the FHIR Terminology Lookup tables. 
+
+To do so we first need to open Putty, start IRIS terminal, and enter the correct namespace.
 
 Enter the following as your user:
 ec2-user
 
-(../images/mod6-ex1.4.png)
+
+![Terminology 1](../images/mod6-ex1.4.png)
 
 It will then prompt you for a user name and password.
 Username: _system
 Password:SYS
 
-(../images/mod6-ex1.5.png)
+![Terminology 2](../images/mod6-ex1.5.png)
 
 Run the next command to enter into a iris terminal session:
 iris terminal irishealth
@@ -60,7 +66,7 @@ We are transforming from FHIR R4.
 We will end up in SDA.
  SDA3
 
- (../images/mod6-ex1.6.png)
+![MTerminology 3](../images/mod6-ex1.6.png)
 
 Instead of having to type out an entire field name we can just enter the number associated with the field. Here we are going to be updating the MedicationAdminStatus.
  17
@@ -72,7 +78,7 @@ We will be mapping the value paused to PA.
  paused
  PA
 
- (../images/mod6-ex1.7.png)
+![Terminology 4](../images/mod6-ex1.7.png)
 
  After the prompts finish Navigate back to FHIR Annotations. 
 
