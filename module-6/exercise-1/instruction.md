@@ -28,41 +28,53 @@ Set the Private Key for Authentication the healthshare-connect.ppk you downloade
 
 Navigate back to Connections.
 Set the following:
-    Host Name: ec2-18-218-191-197.us-east-2.compute.amazonaws.com
+    Host Name: ec2-18-219-162-44.us-east-2.compute.amazonaws.com
     Port: 22
     Connection Type: SSH
 
 (../images/mod6-ex1.1.png)
 
+Enter the following as your user:
 ec2-user
 
 (../images/mod6-ex1.4.png)
 
+It will then prompt you for a user name and password.
 Username: _system
 Password:SYS
 
 (../images/mod6-ex1.5.png)
 
+Run the next command to enter into a iris terminal session:
 iris terminal irishealth
 
+We then need to change into your namespace.
 ZN "*YOUR-NAMESPACE*"
 
+And then we can run the script to actually edit the FHIR LookUp Tables. The script itself will prompt you and tell you what options you have for every step.
  do ##class(HS.FHIR.DTL.Util.API.LookupTable).EditLookupTable()
 
+We are transforming from FHIR R4.
  R4
 
+We will end up in SDA.
  SDA3
 
  (../images/mod6-ex1.6.png)
 
+Instead of having to type out an entire field name we can just enter the number associated with the field. Here we are going to be updating the MedicationAdminStatus.
  17
 
+You can edit an existing value or add a brand new one. For this exercise we are adding a new one.
  +
 
+We will be mapping the value paused to PA.
  paused
-
  PA
 
  (../images/mod6-ex1.7.png)
 
  After the prompts finish Navigate back to FHIR Annotations. 
+
+
+ Try going through the process on your own and updating an existing mapping instead of adding a new one.git 

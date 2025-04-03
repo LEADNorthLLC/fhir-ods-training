@@ -8,7 +8,6 @@
 On your assigned EGFHIRTRAINGING namespace of your HealthShare instance, navigate to the EdgeGatewayProduction  by clicking on Interoperability -> Configure -> Production. 
 
 
-
 Create a new Service by clicking on the plus `+` next to the **Services** header. This will open a wizard where you will set the Service class to **EnsLib.EDI.X12.Service.FileService** and the Service name to **EnsLib.EDI.X12.Service.FileService**. Click enable and ok to finish the service. 
 
 Create a new Process by clicking on the plus `+` next to the **Process** header. This will open a wizard where you will set the Service class to **EnsLib.EDI.X12.MsgRouter.RoutingEngine** and the Service name to **FromX12FileService.Router**. Do not check off the Create Routing Rule if it does not exist option. Click enable and ok to finish the service. 
@@ -22,5 +21,9 @@ For EnsLib.EDI.X12.MsgRouter.RoutingEngine set the RoutingRule to FromX12FileSer
 
 
 
+Set the inbound file to the following, except replacing 00 with the number of your instance:
+/tmp/fhir-training00/x12
 
+
+This should automatically send a message through your pipeline and we can view it in the message trace.
 

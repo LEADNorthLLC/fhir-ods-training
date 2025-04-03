@@ -5,7 +5,7 @@
 
 ## Instructions:
 
-The first step is connecting to the AWS EC2 instance. Navigate to the following link: http://ec2-18-218-191-197.us-east-2.compute.amazonaws.com/irishealth/csp/sys/UtilHome.csp
+The first step is connecting to the AWS EC2 instance. Navigate to the following link: http://ec2-18-219-162-44.us-east-2.compute.amazonaws.com/irishealth/csp/sys/UtilHome.csp
 
 Once there you can log in with the following username: _system, and the password: SYS.
 
@@ -28,5 +28,11 @@ Once we have all of your components created you need to connect them all togethe
     HS.FHIR.DTL.Util.HC.SDA3.FHIR.Process - HS.FHIRServer.Interop.Operation
 
 
-Once your pipeline is configured we will be ready to send a message through.
+Set the inbound file to the following, except replacing 00 with the number of your instance:
+/tmp/fhir-training00/hl7
+
+
+This should automatically send a message through your pipeline and we can view it in the message trace.
+
+
 
