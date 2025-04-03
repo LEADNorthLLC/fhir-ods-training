@@ -210,6 +210,17 @@ Select the **Validate** button at the bottom of the screen and review the errors
 *15-3*. How can you configure the feed to use the **Message Control ID (MSH:10)** as the `PatientResourceId`? (You wouldn't necessarily want to do this, but it is good to see how the message changes when that's done)
 
 
+## Checking Results
 
+You can query the FHIR Server with Postman or any other REST client. If none are available, curl is a command line utility that is available on most systems. 
+
+To query for Patient id 1009456 
+
+From a command line prompt: 
+> curl http://ec2-18-219-162-44.us-east-2.compute.amazonaws.com/irishealth/csp/healthshare/fhirdemo/fhir/r4/Patient/1009456/$everything -u "train1:train1"
+
+This sends the FHIR bundle response to the terminal, which is hard to read. If you want to redirect to a file so you can view and validate, use the following command to write the response to a file called **fhir_response.json**. 
+
+> curl http://ec2-18-219-162-44.us-east-2.compute.amazonaws.com/irishealth/csp/healthshare/fhirdemo/fhir/r4/Patient/1009456/$everything -u "train1:train1" > fhir_response.json
 
 
