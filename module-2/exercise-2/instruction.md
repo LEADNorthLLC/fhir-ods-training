@@ -20,12 +20,14 @@ In this trace, the HL7 file is being sent to the Inbound Process DTL where it is
 
 ### Task:
 
-Find the following WITHOUT reading the HL7 message:
+Find the following in the ODS table:
 
-1. Patient's new last name
-2. Patient's new address
-3. Patient's new phone number
+1. Patient's last name
+2. Patient's address
+3. Patient's phone number
 4. Patient's MPIID
+
+Does the data in ODS match the latest update for the patient? 
 
 ## Instructions:
 
@@ -45,9 +47,7 @@ Send the request.
 Once the request goes through, you should now be able to view the FHIR bundle. Scrolling through the bundle, you should see all resources associated with this Patient [Claim, ClaimResponse, RelatedPerson, Patient, Organization, Provenance, along with clinical data resources from the HL7 sent for the same patient]
 
 
-
-
-### Task 2: Reviewing Postman OperationalOutcomes, and walking through what caused them. 
+### Task 2: Reviewing FHIR OperationalOutcomes, and walking through what caused them. 
 
 Step 1: In the FHIR bundle, you will notice that one resource is an OperationalOutcome that indicates there is a resource that failed to load because it is missing data and did not pass validation. What resource failed to load in this way?
 
@@ -57,5 +57,7 @@ Step 3: Open the management portal in a new tab, leaving the warnings in their o
 
 Bonus step: If you want to look at the DTLs for yourself, you would go to **Interoperability -> Build -> Data Transformations**. 
 
-Once in the editor, click **Open** and pull up the **HS.Gateway.X12.SDA3.From837Iv5010.MedicalClaim** transformation. This is the one that our production used to transform the X12 file. Scrolling through it, you will see that some fields required in FHIR weren’t required in the SDA3, which led to the Operational Outcome for Claim. We have already created another DTL that maps our X12 document to SDA3 while including the remaining fields that are needed in FHIR. Let’s go ahead and test out another file configured to use our edited DTL. 
+Once in the editor, click **Open** and pull up the **HS.Gateway.X12.SDA3.From837Iv5010.MedicalClaim** transformation. This is the one that our production used to transform the X12 file. Scrolling through it, you will see that some fields required in FHIR weren’t populated in the SDA3, which led to the Operational Outcome for Claim. 
+
+We have already created another DTL that maps our X12 document to SDA3 while including the remaining fields that are needed in FHIR. Let’s go ahead and test out another file configured to use our edited DTL. 
 

@@ -46,8 +46,4 @@ Then use this query against the HS_SDA3_Streamlet.Abstract table to display all 
 
 > SELECT * from HS_SDA3_Streamlet.Abstract where AggregationKey = 4
 
-
-
-
-
     
