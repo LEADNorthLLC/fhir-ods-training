@@ -59,7 +59,4 @@ Follow the instructions in the Setting Up Visual Code For IRIS Development docum
 
 ![WinSCP Setting](../images/module4.0-winscp_setup.png)
 
-Setting the Private Key: 
-
-![WinSCP Credentials](../images/module4.0-winscp_credentials.png)
 
